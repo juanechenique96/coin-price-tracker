@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 export default function Navbar() {
 
@@ -24,20 +24,14 @@ export default function Navbar() {
 
     return (
         <header>
-            <nav>
+            <nav className="navbar fixed-top">
                 <a href="#" className="nav-logo">Coin Tracker</a>
                 <ul className="nav-menu">
-                    <li className="nav-item">
-                        <a href="#" className="nav-link" onClick={linkClick}>Services</a>
-                    </li>
-                    <li className="nav-item">
-                        <a href="#" className="nav-link" onClick={linkClick}>Blog</a>
-                    </li>
                     <li className="nav-item">
                         <a href="#" className="nav-link" onClick={linkClick}>About</a>
                     </li>
                     <li className="nav-item">
-                        <a href="#" className="nav-link" onClick={linkClick}>Contact</a>
+                        <a href="#" className="nav-link" onClick={linkClick}>Contact Us</a>
                     </li>
                 </ul>
                 <div className="hamburger" onClick={menuClick}>
@@ -50,14 +44,23 @@ export default function Navbar() {
             <style jsx>{`
             header {
                 border-bottom: 1px solid #E2E8F0;
+                margin-bottom: 20px;
+            }
+            .fixed-top {
+                position: fixed;
+                top: 0;
+                right: 0;
+                left: 0;
+                z-index: 1030;
             }
 
-            nav {
+            .navbar {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
                 padding: 1rem 1.5rem;
                 margin: 0rem 2rem;
+                background: white;
             }
 
             .hamburger {
@@ -87,7 +90,7 @@ export default function Navbar() {
             .nav-link {
                 font-size: 1.4rem;
                 font-weight: 400;
-                color: #475569;
+                color: #191716;
             }
 
             .nav-link:hover {
@@ -139,7 +142,11 @@ export default function Navbar() {
                 .hamburger.active .bar:nth-child(3) {
                     transform: translateY(-8px) rotate(-45deg);
                 }
-
+                @media only screen and (max-width: 490px) {
+                    .navbar {
+                        margin: 0px 0px;
+                    }
+                }
             }
             `}</style>
         </header>
