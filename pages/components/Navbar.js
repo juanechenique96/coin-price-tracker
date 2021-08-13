@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState } from 'react';
+import Link from 'next/link';
 
 export default function Navbar() {
 
@@ -25,13 +26,19 @@ export default function Navbar() {
     return (
         <header>
             <nav className="navbar fixed-top">
-                <a href="#" className="nav-logo">Coin Tracker</a>
+                <Link href="/">
+                    <a className="nav-logo">Coin Tracker</a>
+                </Link>
                 <ul className="nav-menu">
                     <li className="nav-item">
-                        <a href="#" className="nav-link" onClick={linkClick}>About</a>
+                        <Link href="/">
+                            <a className="nav-link" onClick={linkClick}>About</a>
+                        </Link>
                     </li>
                     <li className="nav-item">
-                        <a href="#" className="nav-link" onClick={linkClick}>Contact Us</a>
+                        <Link href="/contact">
+                            <a className="nav-link" onClick={linkClick}>Contact Us</a>
+                        </Link>
                     </li>
                 </ul>
                 <div className="hamburger" onClick={menuClick}>
@@ -60,7 +67,7 @@ export default function Navbar() {
                 align-items: center;
                 padding: 1rem 1.5rem;
                 margin: 0rem 2rem;
-                background: white;
+                background: #F4F4F8;
             }
 
             .hamburger {
@@ -109,7 +116,7 @@ export default function Navbar() {
                     left: -100%;
                     top: 5rem;
                     flex-direction: column;
-                    background-color: #fff;
+                    background-color: #F4F4F8;
                     width: 100%;
                     border-radius: 10px;
                     text-align: center;

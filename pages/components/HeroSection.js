@@ -26,12 +26,12 @@ export default function HeroSection() {
                     margin-bottom: 90px;
                 }
                 .phrase {
-                    position: absolute;
-                    z-index: 0;
                     display: flex;
                     flex-direction: column;
                     align-items: flex-start;
                     justify-content: center;
+                    position: absolute;
+                    z-index: 0;
                 }
                 .title-1, .title-2 {
                     font-size: 64px;
@@ -40,8 +40,10 @@ export default function HeroSection() {
                 }
                 .subtitle {
                     font-weight: 400;
+                    font-size: 28px;
                     color: #635d5a;
-                    padding-left: 20px;
+                    padding-left: 50px;
+                    padding-bottom: 10px;
                 }
                 .logos {
                     display: grid;
@@ -74,7 +76,7 @@ export default function HeroSection() {
                         font-size: 48px;
                     }
                     .subtitle {
-                        padding-left: 12px;
+                        font-size: 16px;
                     }
                     .logos {
                         width: 400px;
