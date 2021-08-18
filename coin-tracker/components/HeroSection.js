@@ -8,10 +8,10 @@ export default function HeroSection() {
             </div>
             <div className="logos">
                 <div className="btc">
-                    <img src="/Bitcoin-Logo.png" />
+                    <img src="/Bitcoin-Logo.png" alt="bitcoin logo" />
                 </div>
                 <div className="eth">
-                    <img src="/Ethereum-Logo.png" />
+                    <img src="/Ethereum-Logo.png" alt="ethereum logo" />
                 </div>
             </div>
 
