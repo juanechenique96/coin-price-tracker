@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 export default function HeroSection() {
     return (
         <section id="about" className="hero">
@@ -8,10 +10,27 @@ export default function HeroSection() {
             </div>
             <div className="logos">
                 <div className="btc">
-                    <img src="/Bitcoin-Logo.png" alt="bitcoin logo" />
+                    <div className="image-container-btc">
+                        <Image
+                            src="/Bitcoin-Logo.png"
+                            alt="bitcoin logo"
+                            layout="responsive"
+                            width={124.5}
+                            height={70}
+                        />
+                    </div>
                 </div>
                 <div className="eth">
-                    <img src="/Ethereum-Logo.png" alt="ethereum logo" />
+                    <div className="image-container-eth">
+
+                        <Image
+                            src="/Ethereum-Logo.png"
+                            alt="ethereum logo"
+                            layout="responsive"
+                            width={70}
+                            height={70}
+                        />
+                    </div>
                 </div>
             </div>
 
@@ -31,7 +50,7 @@ export default function HeroSection() {
                     align-items: flex-start;
                     justify-content: center;
                     position: absolute;
-                    z-index: 0;
+                    z-index: 1;
                 }
                 .title-1, .title-2 {
                     font-size: 64px;
@@ -52,12 +71,17 @@ export default function HeroSection() {
                     width: 760px;
                     height: 150px;
                 }
-                .logos img {
+                .image-container-btc {
+                    width: 124.5px;
                     height: 70px;
-                    width: auto;
+                    z-index: 2;
+                }
+                .image-container-eth {
+                    width: 70px;
+                    height: 70px;
+                    z-index: 0;
                 }
                 .btc {
-                    z-index: 1;
                     display: flex;
                     justify-content: center;
                     margin-right: 42px;
@@ -68,7 +92,7 @@ export default function HeroSection() {
                     grid-column-start: 2;
                     grid-row-start: 2;
                     margin-top: 10px; 
-                    margin-left: 30px;
+                    margin-left: 35px;
                 }
 
                 @media only screen and (max-width: 840px){
@@ -81,7 +105,12 @@ export default function HeroSection() {
                     .logos {
                         width: 400px;
                     }
-                    .logos img {
+                    .image-container-btc {
+                        width: 80.5px;
+                        height: 30px;
+                    }
+                    .image-container-eth {
+                        width: 40px;
                         height: 40px;
                     }
                     .btc {

@@ -1,15 +1,42 @@
+import Image from 'next/image'
+
+
 export default function Footer() {
     return (
         <footer>
             <div className="info">
                 <a href="#">
-                    <img className="twitter" src="/twitter.svg" />
+                    <div className="image-container">
+                        <Image
+                            className="twitter"
+                            src="/twitter.svg"
+                            layout="responsive"
+                            width={24}
+                            height={24}
+                        />
+                    </div>
                 </a>
                 <a href="#">
-                    <img className="facebook" src="/facebook.svg" />
+                    <div className="image-container">
+                        <Image
+                            className="facebook"
+                            src="/facebook.svg"
+                            layout="responsive"
+                            width={24}
+                            height={24}
+                        />
+                    </div>
                 </a>
                 <a href="#">
-                    <img className="instagram" src="/instagram.svg" />
+                    <div className="image-container">
+                        <Image
+                            className="instagram"
+                            src="/instagram.svg"
+                            layout="responsive"
+                            width={24}
+                            height={24}
+                        />
+                    </div>
                 </a>
             </div>
             <p className="company">© 2021 Coin Tracker.</p>
@@ -36,7 +63,9 @@ export default function Footer() {
                     height: 60%;
                     width: 100%;
                 }
-                .info * {
+                .image-container {
+                    width: 24px;
+                    height: 24px;
                     margin-right: 10px;
                 }
                 .info *:hover{

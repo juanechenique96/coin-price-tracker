@@ -8,3 +8,11 @@ module.exports = {
   },
   assetPrefix: !debug ? 'https://juanechenique96.github.io/coin-tracker/' : '',
 }
+
+
+module.exports = {
+  reactStrictMode: true,
+  images: {
+    domains: ['assets.coingecko.com'],
+  },
+}
