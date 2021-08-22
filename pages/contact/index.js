@@ -11,7 +11,7 @@ export default function Contact() {
             <Head>
                 <title>Coin Tracker | Contact</title>
             </Head>
-            <body>
+            <main>
                 <Navbar />
                 <Form />
                 <Footer />
@@ -37,6 +37,7 @@ export default function Contact() {
                         }
                     `}
                 </style>
-            </body>
-        </>)
+            </main>
+        </>
+    )
 }

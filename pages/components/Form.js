@@ -1,4 +1,40 @@
+import { useState } from 'react'
+
+
 export default function Form() {
+    const [name, setName] = useState('')
+    const [email, setEmail] = useState('')
+    const [message, setMessage] = useState('')
+    const [submitted, setSubmitted] = useState(false)
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+
+        console.log('Sending')
+
+        let data = {
+            name,
+            email,
+            message
+        }
+
+        let xhr = new XMLHttpRequest()
+        xhr.open('POST', '/api/contact')
+        xhr.setRequestHeader('content-type', 'application/json')
+        xhr.onload = () => {
+            console.log(xhr.responseText)
+
+            if (xhr.responseText === 'success') {
+                alert('Email sent')
+                setName('')
+                setEmail('')
+                setMessage('')
+            } else {
+                alert('Somthing went wrong')
+            }
+        }
+        xhr.send(JSON.stringify(data))
+    }
     return (
         <>
             <section className="main">
@@ -6,19 +42,41 @@ export default function Form() {
                     <h1>Contact Us</h1>
                     <form>
                         <div className="formgroup-data">
-                            <input type="text" name="name" className="input" required />
+                            <input
+                                type="text"
+                                name="name"
+                                className="input"
+                                onChange={(e) => { setName(e.target.value) }}
+                                required
+                            />
                             <label htmlFor="name">Name</label>
                         </div>
                         <div className="formgroup-data">
-                            <input type="email" name="email" className="input" required />
+                            <input
+                                type="email"
+                                name="email"
+                                className="input"
+                                onChange={(e) => { setEmail(e.target.value) }}
+                                required
+                            />
                             <label htmlFor="email">Email Adress</label>
                         </div>
                         <div className="formgroup-text">
-                            <textarea type='text' name='message' className="input" required />
+                            <textarea
+                                type='text'
+                                name='message'
+                                className="input"
+                                onChange={(e) => { setMessage(e.target.value) }}
+                                required
+                            />
                             <label htmlFor="message">Write your message</label>
                         </div>
 
-                        <input className="submit" type='submit' />
+                        <input
+                            className="submit"
+                            type='submit'
+                            onClick={(e) => { handleSubmit(e) }}
+                        />
                     </form>
                 </div>
             </section>
@@ -71,6 +129,7 @@ export default function Form() {
                 position: absolute;
                 pointer-events: none;
                 font-weight: 400;
+                transition: all 0.3s ease;
             }
             .formgroup-text textarea {
                 resize: none;
@@ -80,6 +139,7 @@ export default function Form() {
             }
             .formgroup-data input:focus,
             .formgroup-text textarea:focus{
+                border-bottom: 3px solid rgba(72, 47, 247, 0.8);
                 outline: none;
             }
             .formgroup-data input:focus ~ label,
@@ -88,6 +148,23 @@ export default function Form() {
                 font-size: 14px;
                 color: #482ff7;
             }
+            .formgroup-data input:valid ~ label,
+            .formgroup-text textarea:valid ~ label {
+                transform: translateY(-20px);
+                font-size: 14px;
+                color: #482ff7;
+            }
+            {/* .formgroup-data input:invalid ,
+            .formgroup-text textarea:invalid {
+                border-bottom: 3px solid rgba(247, 47, 47, 0.8);
+                outline: none;
+            }
+            .formgroup-data input:invalid ~ label,
+            .formgroup-text textarea:invalid ~ label {
+                transform: translateY(-20px);
+                font-size: 14px;
+                color: #482ff7;
+            } */}
             .submit {
                 width: 106px;
                 height: 25px;
@@ -99,6 +176,11 @@ export default function Form() {
                 cursor: pointer;
                 box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
             }
+            @media only screen and (max-width: 600px) {
+                    .container {
+                        width: 350px;
+                    }
+                }
         `}</style>
         </>
     )

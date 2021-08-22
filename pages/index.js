@@ -11,7 +11,7 @@ export default function Home({ data }) {
       <Head>
         <title>Coin Tracker | Home</title>
       </Head>
-      <body>
+      <main>
 
         <Navbar />
         <HeroSection />
@@ -39,7 +39,7 @@ export default function Home({ data }) {
             }
           `}
         </style>
-      </body>
+      </main>
     </>
   )
 }
