@@ -51,7 +51,7 @@ export default function Navbar() {
             <style jsx>{`
             header {
                 border-bottom: 1px solid #E2E8F0;
-                margin-bottom: 20px;
+                height: 10vh;
             }
             .fixed-top {
                 position: fixed;
@@ -149,6 +149,7 @@ export default function Navbar() {
                 .hamburger.active .bar:nth-child(3) {
                     transform: translateY(-8px) rotate(-45deg);
                 }
+
                 @media only screen and (max-width: 490px) {
                     .navbar {
                         margin: 0px 0px;

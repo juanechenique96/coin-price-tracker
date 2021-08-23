@@ -85,6 +85,7 @@ export default function Form() {
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                height: 80vh;
             }
             .container {
                 display: flex;
@@ -96,7 +97,7 @@ export default function Form() {
                 box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
                 height: 400px;
                 width: 500px;
-                margin: 105px 0px;
+                /*margin: 105px 0px;*/
             }
             .container h1 {
                 border-bottom: 6px solid #482ff7;
@@ -176,11 +177,19 @@ export default function Form() {
                 cursor: pointer;
                 box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
             }
+
             @media only screen and (max-width: 600px) {
                     .container {
                         width: 350px;
                     }
+            }
+
+            @media only screen and (max-height: 490px) {
+                .main {
+                    height: 550px;
                 }
+            }
+
         `}</style>
         </>
     )

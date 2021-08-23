@@ -1,34 +1,25 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Coin price tracker
 
-## Getting Started
+Este proyecto fue creado utilizando Next.js consumiendo la api publica de [CoinGecko](https://www.coingecko.com/es "CoinGecko") para mostrar el valor (en las ultimas 24hs) de las top 10 cryptos, tambien posee una pestaña de Contact Us, donde utilizando Nodemailer un usuario puede contactarnos enviandonos un mensaje a nuestro gmail sin salir de la pagina.
 
-First, run the development server:
+## Comenzando
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+Para usar esta aplicacion lo unico que debes hacer es clonar este repositorio:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+    git clone https://github.com/juanechenique96/Infobae-scraper.git
+    yarn
+    yarn dev
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+(Aclaracion: en el directorio /pages/api/contact.js reemplazar process.env.TO por 'tumail@gmail.com')
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Imagenes del proyecto
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+**iPhone x (375x812)**
+![Localhost - iPhone X - 2021-8-23 at 10 49 36](https://user-images.githubusercontent.com/57737409/130470929-b792fbb8-1409-41e8-9dc3-727d43b07dfc.jpg)
 
-## Learn More
+![Localhost - iPhone X - 2021-8-23 at 11 04 12](https://user-images.githubusercontent.com/57737409/130470938-b41e54df-9fac-467b-b8aa-d728469a57fc.jpg)
 
-To learn more about Next.js, take a look at the following resources:
+**Generic Laptop (1280x950)**
+![Localhost - Generic Laptop - 2021-8-23 at 10 47 53](https://user-images.githubusercontent.com/57737409/130471212-2dc0aa35-24a3-47b5-bf69-de7a6a3d0a77.jpg)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+![Localhost - Generic Laptop - 2021-8-23 at 11 04 20](https://user-images.githubusercontent.com/57737409/130471231-1164c09d-3f50-4c58-a17b-63bb05123646.jpg)

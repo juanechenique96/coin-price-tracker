@@ -52,8 +52,7 @@ export default function Footer() {
                     align-items: center;
                     background-color: #191716;
                     width: 100%;
-                    height: 100px;
-                    margin-top: 50px;
+                    height: 10vh;
                 }
                 .info {
                     display: flex;
@@ -76,6 +75,12 @@ export default function Footer() {
                     font-size: 12px;
                     margin-right: 15px;
                 }
+
+                @media only screen and (max-height: 490px) {
+                footer {
+                    height: 80px;
+                }
+            }
             `}</style>
         </footer>
     )

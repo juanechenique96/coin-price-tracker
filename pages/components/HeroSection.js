@@ -68,7 +68,7 @@ export default function HeroSection() {
                     display: grid;
                     grid-template-columns: 50% 50%;
                     grid-template-rows: 50% 50%;
-                    width: 760px;
+                    width: 540px;
                     height: 150px;
                 }
                 .image-container-btc {
@@ -83,16 +83,16 @@ export default function HeroSection() {
                 }
                 .btc {
                     display: flex;
-                    justify-content: center;
-                    margin-right: 42px;
+                    justify-content: flex-start;
+                    /*margin-right: 62px;*/
                 }
                 .eth {
                     display: flex;
-                    justify-content: center;
+                    justify-content: flex-end;
                     grid-column-start: 2;
                     grid-row-start: 2;
                     margin-top: 10px; 
-                    margin-left: 35px;
+                    margin-right: 54px;
                 }
 
                 @media only screen and (max-width: 840px){
@@ -103,7 +103,7 @@ export default function HeroSection() {
                         font-size: 16px;
                     }
                     .logos {
-                        width: 400px;
+                        width: 380px;
                     }
                     .image-container-btc {
                         width: 80.5px;
@@ -120,7 +120,15 @@ export default function HeroSection() {
                     .eth {
                         grid-row-start: 1;
                         margin-left: 32px;
+                        margin-right: 32px;
                         margin-top: 32px;
+                    }
+                @media only screen and (max-width: 540px){
+                    .image-container-btc {
+                        z-index: 0;
+                    }
+                    .image-container-eth {
+                        z-index: 0;
                     }
                 }
             `}</style>
