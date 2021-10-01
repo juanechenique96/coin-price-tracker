@@ -6,7 +6,7 @@ Este proyecto fue creado utilizando Next.js consumiendo la api publica de [CoinG
 
 Para usar esta aplicacion lo unico que debes hacer es clonar este repositorio:
 
-    git clone https://github.com/juanechenique96/Infobae-scraper.git
+    git clone https://github.com/juanechenique96/coin-price-tracker.git
     yarn
     yarn dev
 
